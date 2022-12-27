@@ -140,3 +140,50 @@
 	<iostream>
 	<math.h>
 
+1621614456 source:d:\studia - projekty\nowy folder\notdone\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<iostream>
+	"arc.h"
+	"line.h"
+	"figure.h"
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+	<stdlib.h>
+	<stdio.h>
+
+1620557740 d:\studia - projekty\nowy folder\notdone\include\arc.h
+
+1620458296 d:\studia - projekty\nowy folder\notdone\include\line.h
+	<iostream>
+
+1672176318 d:\studia - projekty\nowy folder\notdone\include\figure.h
+	"arc.h"
+	"line.h"
+	<iostream>
+	<string>
+	<fstream>
+
+1620559094 source:d:\studia - projekty\nowy folder\notdone\src\arc.cpp
+	"arc.h"
+	<stdio.h>
+	<stdlib.h>
+	<iostream>
+	<math.h>
+
+1621614808 source:d:\studia - projekty\nowy folder\notdone\src\figure.cpp
+	"figure.h"
+	"arc.h"
+	"line.h"
+	<iostream>
+	<string>
+	<fstream>
+	<sstream>
+	<math.h>
+
+1620466504 source:d:\studia - projekty\nowy folder\notdone\src\line.cpp
+	"line.h"
+	<iostream>
+	<math.h>
+

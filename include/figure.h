@@ -11,7 +11,7 @@ class figure
     public:
         figure();
         ~figure();
-        bool add_poits(float**,int);
+        bool add_points(float**,int);
         void save(std::string);
         bool load(std::string);
         void print();

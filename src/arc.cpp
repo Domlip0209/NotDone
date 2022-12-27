@@ -47,12 +47,12 @@ float arc::angle_determination(float a,float b,float c)
 }
 void arc::print()
 {
-    cout<<"Punkty:["<<Starting_point[0]<<","<<Starting_point[1]<<"]"<<endl;
+    cout<<"Points:["<<Starting_point[0]<<","<<Starting_point[1]<<"]"<<endl;
     cout<<"["<<mid_point[0]<<","<<mid_point[1]<<"]"<<endl;
     cout<<"["<<end_point[0]<<","<<end_point[1]<<"]"<<endl;
-    cout<<"Promien:"<<radius<<endl;
-    cout<<"Kat:"<<angle<<endl;
-    cout<<"Punkty na luku:"<<endl;
+    cout<<"Radius:"<<radius<<endl;
+    cout<<"Angle:"<<angle<<endl;
+    cout<<"Points on the curve:"<<endl;
     //cout<<180/Pi*acos((Starting_point[0]-mid_point[0])/radius)<<endl;
     for(int i=0;i<tab_size;i++)
     {
@@ -91,7 +91,7 @@ bool arc::Create_points_list()
                 delete[] points_table[i];
             }
             delete points_table;
-            cout<<"Blond pamienci";
+            cout<<"Memory fault";
             return 0;
         }
 
