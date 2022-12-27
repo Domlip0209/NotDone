@@ -5,7 +5,6 @@
 using namespace std;
 line::line()
 {
-    //ctor
 }
 line::line(float* N_starting_point,float* N_end_point)
 {
@@ -20,10 +19,10 @@ line::line(float* N_starting_point,float* N_end_point)
 }
 void line::print()
 {
-    cout<<"Punkty:["<<Starting_point[0]<<","<<Starting_point[1]<<"]"<<endl;
+    cout<<"Points:["<<Starting_point[0]<<","<<Starting_point[1]<<"]"<<endl;
     cout<<"["<<end_point[0]<<","<<end_point[1]<<"]"<<endl;
-    cout<<"dugosc:"<<line_length<<endl;
-    cout<<"Punkty listy:"<<endl;
+    cout<<"Lenght:"<<line_length<<endl;
+    cout<<"Points list:"<<endl;
     for(int i=0;i<tab_size;i++)
     {
         cout<<"x("<<i<<")="<<points_table[i][0]<<" ";
@@ -50,7 +49,7 @@ bool line::Create_points_list()
                 delete[] points_table[i];
             }
             delete points_table;
-            cout<<"Blond pamienci";
+            cout<<"Memory fault";
             return 0;
         }
 

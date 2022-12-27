@@ -28,14 +28,11 @@ int main(int argc, char **argv)
     Figura.calculate();
 
     glutInit(&argc,argv);
-    glutInitDisplayMode(GLUT_RGB);//podwujne buforowanie |GLUTE_DOUBLE | GRAFIKA 3D GLUT_DEPTH
+    glutInitDisplayMode(GLUT_RGB);// |GLUTE_DOUBLE | 3D GLUT_DEPTH
     glutInitWindowPosition(250,100);
     glutInitWindowSize(500,500);
     glutCreateWindow("OpenGL window");
-
-    //funcja wyœwietlanie
     glutDisplayFunc(&display);
-    //display();
     glutReshapeFunc(&Reshape);
     glutKeyboardFunc(&keyboard);
     init();
@@ -45,11 +42,11 @@ int main(int argc, char **argv)
 }
 void Reshape(int w, int h)
 {
-    //okresla miejsce i przestrzeni gdzie rysujesz
+    //start view
     glViewport(0,0,(GLsizei)w,(GLsizei)h);
-    //tryb projekcji
+    //projection mode
     glMatrixMode(GL_PROJECTION);
-    //reset wszytskich transformacji
+    //reset
     glLoadIdentity();
     gluOrtho2D(-10.0,10.0,-10.0,10.0);
     glMatrixMode(GL_MODELVIEW);
@@ -57,17 +54,17 @@ void Reshape(int w, int h)
 }
 void display()
 {
-    //czysczenie buforów do rysowania ¿ebu nie by³o smieci
+    //buffor clear
     glClear(GL_COLOR_BUFFER_BIT);
-    //reset transformacji
+    //reset
     glLoadIdentity();
     draw();
-    //drukowanie na ekran
+    //drawing
     glFlush();
 }
 void init()
 {
-    //ustawienie kolou tla
+    //background colour
     glClearColor(0,0,0,1);
 }
 
@@ -86,15 +83,15 @@ void mainmanu()
 
 void draw()
 {
-    //rysowanie punktów
+    //drawing points
     GLfloat color[]={1,1,1};
     float**pt;
     int Tab_size;
     pt=Figura.get_points_table();
     Tab_size=Figura.get_tab_size();
     glPointSize(10);
-    glBegin(GL_LINE_LOOP); //line zamkniente
-    //glBegin(GL_TRIANGLES); //powieszchnie
+    glBegin(GL_LINE_LOOP);
+    //glBegin(GL_TRIANGLES);
     //glBegin(GL_POLYGON);
     //glBegin(GL_QUADS);
         for(int i=0;i<Tab_size;i++)

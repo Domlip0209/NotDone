@@ -25,12 +25,12 @@ void figure::calculate()
         Iy=Iy+d/12*(a[i][0]*a[i][0]+a[i][0]*a[i+1][0]+a[i+1][0]*a[i+1][0]);
         Ixy=Ixy+d/24*(a[i][0]*(2*a[i][1]+a[i+1][1])+a[i+1][0]*(2*a[i+1][1]+a[i][1]));
     }
-    printf("Pole:%4.2f\n",A);
-    printf("Moment Sx=%4.2f, Sy=%4.2f\n",Sx,Sy);
-    printf("Moment Ix=%4.2f, Iy=%4.2f\n",Ix,Iy);
-    printf("Moment Ixy=%4.2f\n",Ixy);
+    printf("Square:%4.2f\n",A);
+    printf("Torque Sx=%4.2f, Sy=%4.2f\n",Sx,Sy);
+    printf("Torque Ix=%4.2f, Iy=%4.2f\n",Ix,Iy);
+    printf("Torque Ixy=%4.2f\n",Ixy);
 }
-bool figure::add_poits(float** N_tab_p,int N_size)
+bool figure::add_points(float** N_tab_p,int N_size)
 {
     float** contener=NULL;
     int contener_size=0;
@@ -64,7 +64,7 @@ bool figure::add_poits(float** N_tab_p,int N_size)
             delete[] points_table[i];
         }
         delete points_table;
-        cout<<"Blond pamienci";
+        cout<<"Memory fault";
         return 0;
     }
 
@@ -152,7 +152,7 @@ bool figure::ad_point_to_table(float x, float y)
             delete[] points_table[i];
         }
         delete points_table;
-        cout<<"Blond pamienci";
+        cout<<"Memory fault";
         return 0;
     }
 
